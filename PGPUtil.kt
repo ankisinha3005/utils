@@ -1,5 +1,3 @@
-package com.booking.salon.util
-
 import com.booking.salon.exception.PlatformValidationException
 import mu.KLoggable
 import org.bouncycastle.bcpg.ArmoredOutputStream
