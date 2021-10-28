@@ -1,0 +1,42 @@
+# added a mirror to unblock http calls for newer version of maven
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <servers>
+        <server>
+            <id>artifacts-snapshot</id>
+            <username>admin</username>
+            <password>password</password>
+            <filePermissions>664</filePermissions>
+            <directoryPermissions>775</directoryPermissions>
+            <configuration></configuration>
+        </server>
+        <server>
+            <id>artifacts-release</id>
+            <username>admin</username>
+            <password>password</password>
+            <filePermissions>664</filePermissions>
+            <directoryPermissions>775</directoryPermissions>
+            <configuration></configuration>
+        </server>
+    </servers>
+
+    <mirrors>
+        <mirror>
+            <id>artifacts-release</id>
+            <mirrorOf>artifacts-release</mirrorOf>
+            <name>artifacts-release</name>
+            <url>url</url>
+        </mirror>
+
+        <mirror>
+            <id>artifacts-snapshot</id>
+            <mirrorOf>artifacts-snapshot</mirrorOf>
+            <name>artifacts-snapshot</name>
+            <url>url</url>
+        </mirror>
+    </mirrors>
+
+</settings>
